@@ -55,14 +55,7 @@ app.use('/api/factures', factureRoutes);
   
 
 
-// Serve static files from the Vue app
-app.use(express.static(path.join(__dirname, 'frontend/dist')));
-
-// Handle SPA
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'frontend/dist/index.html'));
-});
-
+ 
 
 
 
