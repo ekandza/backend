@@ -31,7 +31,7 @@ router.get('/', async (req, res) => {
 });
 
 // Mettre à jour un utilisateur
-router.put('/:id', async (req, res) => {
+router.put('edit/:id', async (req, res) => {
     const { id } = req.params;
     const { login, password } = req.body;
 
@@ -54,7 +54,7 @@ router.put('/:id', async (req, res) => {
 });
 
 // Supprimer un utilisateur
-router.delete('/:id', async (req, res) => {
+router.delete('delete/:id', async (req, res) => {
     const { id } = req.params;
 
     try {
