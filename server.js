@@ -3,9 +3,9 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const classRouter=require('./routes/classesRouter');
 const usersRouter = require('./routes/usersRouter');
-const produitRoutes = require('./routes/produitRouter');
-const transactionRoutes = require('./routes/transactionRouter');
-const factureRoutes = require('./routes/factureRouter');
+const produitRouter = require('./routes/produitRouter');
+const transactionRouter = require('./routes/transactionRouter');
+const factureRouter = require('./routes/factureRouter');
 require('dotenv').config();
 const path = require('path');
 const session = require('express-session');
@@ -48,9 +48,9 @@ mongoose.connect(uri, {
 // Use items router
 app.use('/api/compte', usersRouter);
 app.use('/api/classes',classRouter);
-app.use('/api/produits', produitRoutes);
-app.use('/api/transactions', transactionRoutes);
-app.use('/api/factures', factureRoutes);
+app.use('/api/produits', produitRouter);
+app.use('/api/transactions', transactionRouter);
+app.use('/api/factures', factureRouter);
 
   
 
