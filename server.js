@@ -3,13 +3,13 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const classRouter=require('./routes/classesRouter');
 const usersRouter = require('./routes/usersRouter');
+const produitRoutes = require('./routes/produitRouter');
+const transactionRoutes = require('./routes/transactionRouter');
+const factureRoutes = require('./routes/factureRouter');
 require('dotenv').config();
 const path = require('path');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
-const produitRoutes = require('./routes/produitRouter');
-const transactionRoutes = require('./routes/transactionRouter');
-const factureRoutes = require('./routes/factureRouter');
 
 
 const app = express(); 
