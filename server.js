@@ -6,6 +6,9 @@ const usersRouter = require('./routes/usersRouter');
 const stocksRouter = require('./routes/stocksRouter');
 const transactionRouter = require('./routes/transactionRouter');
 const factureRouter = require('./routes/factureRouter');
+
+const testRouter=require('./routes/testRouter);
+                         
 require('dotenv').config();
 const path = require('path');
 const session = require('express-session');
@@ -51,6 +54,7 @@ app.use('/api/classes',classRouter);
 app.use('/api/stocks', stocksRouter);
 app.use('/api/transactions', transactionRouter);
 app.use('/api/factures', factureRouter);
+app.use('/',testRouter);
 
   
 
