@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const classRouter=require('./routes/classesRouter');
 const usersRouter = require('./routes/usersRouter');
-const produitRouter = require('./routes/produitRouter');
+const produitRouter = require('./routes/stocksRouter');
 const transactionRouter = require('./routes/transactionRouter');
 const factureRouter = require('./routes/factureRouter');
 require('dotenv').config();
@@ -48,7 +48,7 @@ mongoose.connect(uri, {
 // Use items router
 app.use('/api/compte', usersRouter);
 app.use('/api/classes',classRouter);
-app.use('/api/produits', produitRouter);
+app.use('/api/stocks', stocksRouter);
 app.use('/api/transactions', transactionRouter);
 app.use('/api/factures', factureRouter);
 
