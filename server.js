@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const classRouter=require('./routes/classesRouter');
 const usersRouter = require('./routes/usersRouter');
-const produitRouter = require('./routes/stocksRouter');
+const stocksRouter = require('./routes/stocksRouter');
 const transactionRouter = require('./routes/transactionRouter');
 const factureRouter = require('./routes/factureRouter');
 require('dotenv').config();
