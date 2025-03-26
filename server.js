@@ -7,7 +7,7 @@ const stocksRouter = require('./routes/stocksRouter');
 const transactionRouter = require('./routes/transactionRouter');
 const factureRouter = require('./routes/factureRouter');
 
-const testRouter=require('./routes/testRouter);
+const testRouter=require('./routes/testRouter');
                          
 require('dotenv').config();
 const path = require('path');
