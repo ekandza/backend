@@ -4,10 +4,10 @@ const bodyParser = require('body-parser');
 const classRouter=require('./routes/classesRouter');
 const usersRouter = require('./routes/usersRouter');
 const stocksRouter = require('./routes/stocksRouter');
-const transactionRouter = require('./routes/transactionRouter');
-const factureRouter = require('./routes/factureRouter');
+const transactionsRouter = require('./routes/transactionRouter');
+const facturesRouter = require('./routes/factureRouter');
 
-const testRouter=require('./routes/testRouter');
+const testRouter=require('./routes/testRouter'); 
                          
 require('dotenv').config();
 const path = require('path');
@@ -52,8 +52,8 @@ mongoose.connect(uri, {
 app.use('/api/compte', usersRouter);
 app.use('/api/classes',classRouter);
 app.use('/api/stocks', stocksRouter);
-app.use('/api/transactions', transactionRouter);
-app.use('/api/factures', factureRouter);
+app.use('/api/transactions', transactionsRouter);
+app.use('/api/factures', facturesRouter);
 app.use('/',testRouter);
 
   
